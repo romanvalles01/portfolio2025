@@ -1,6 +1,6 @@
+"use client";
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./centralChip.module.css";
-import LeaderLine from "leader-line-new";
 
 export default function CentralChip() {
   const [isHovering, setIsHovering] = useState(false);
@@ -19,18 +19,24 @@ export default function CentralChip() {
 
   const linesRef = useRef([]);
 
+  // Asegúrate de que el código de LeaderLine se ejecute solo en el cliente
   useEffect(() => {
-    if (!chipRef.current) return;
+    if (typeof window === "undefined" || !chipRef.current) return;
 
-    linesRef.current = satelliteRefs.map((ref) => {
-      if (!ref.current) return null;
-      return new LeaderLine(chipRef.current, ref.current, {
-        color: "#00f0ff",
-        size: 2,
-        path: "grid", // 👈 esto hace que se vea más cuadrado
-        startPlug: "behind",
-        endPlug: "behind",
-        dash: { animation: true },
+    // Importa dinámicamente solo en el cliente
+    import("leader-line-new").then((module) => {
+      const LeaderLine = module.default;
+
+      linesRef.current = satelliteRefs.map((ref) => {
+        if (!ref.current) return null;
+        return new LeaderLine(chipRef.current, ref.current, {
+          color: "#00f0ff",
+          size: 2,
+          path: "grid",
+          startPlug: "behind",
+          endPlug: "behind",
+          dash: { animation: true },
+        });
       });
     });
 

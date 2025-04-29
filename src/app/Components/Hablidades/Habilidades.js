@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import styles from "./habilidades.module.css";
 import CentralChip from "./CentralChip/CentralChip";

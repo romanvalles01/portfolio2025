@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
 import styles from "./timeLine.module.css";
 import Image from "next/image";
 import LucyBack from "../../../statics/backLucy.png";
-import LeaderLine from "leader-line-new";
 
 export default function TimeLine() {
   const timelineRefs = useRef([]);
@@ -42,26 +40,35 @@ export default function TimeLine() {
   ];
 
   useEffect(() => {
-    if (!lucyRef.current) return;
+    let isMounted = true;
 
-    const lines = [];
+    async function drawLines() {
+      if (!lucyRef.current) return;
 
-    timelineRefs.current.forEach((item) => {
-      if (item && lucyRef.current) {
-        const line = new LeaderLine(item, lucyRef.current, {
-          color: "#56f7ff",
-          size: 2,
-          path: "grid",
-          startPlug: "behind",
-          endPlug: "behind",
-          animOptions: { duration: 1000, timing: "ease" },
-        });
-        lines.push(line);
-      }
-    });
+      const LeaderLine = (await import("leader-line-new")).default;
+      const lines = [];
+
+      timelineRefs.current.forEach((item) => {
+        if (item && lucyRef.current) {
+          const line = new LeaderLine(item, lucyRef.current, {
+            color: "#56f7ff",
+            size: 2,
+            path: "grid",
+            startPlug: "behind",
+            endPlug: "behind",
+            animOptions: { duration: 1000, timing: "ease" },
+          });
+          lines.push(line);
+        }
+      });
+
+      return () => lines.forEach((line) => line.remove());
+    }
+
+    drawLines();
 
     return () => {
-      lines.forEach((line) => line.remove());
+      isMounted = false;
     };
   }, []);
 
@@ -70,13 +77,9 @@ export default function TimeLine() {
       <div className={styles.timelineWrapper}>
         <div className={styles.timeline}>
           {timelineItems.map((item, index) => (
-            <motion.div
+            <div
               key={index}
               className={styles.timelineItem}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
               ref={(el) => {
                 if (el) timelineRefs.current[index] = el;
               }}
@@ -90,7 +93,7 @@ export default function TimeLine() {
                   <p>{item.description}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
         <div className={styles.lucyContainer}>

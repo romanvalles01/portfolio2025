@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./proyectos.module.css";
 import ProyectCard from "./ProyectCard/ProyectCard";
