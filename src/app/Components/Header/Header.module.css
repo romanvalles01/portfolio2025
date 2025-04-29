@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: fixed;
+  height: 70px;
+  color: #5ef6ff;
+  background: rgba(255, 255, 255, 0);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.1px);
+  -webkit-backdrop-filter: blur(10.1px);
+  z-index: 999;
+}
+
+.ul {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+  padding-bottom: 10px;
+  flex-direction: row;
+  list-style: none;
+  font-family: "Orbitron", sans-serif;
+  border-bottom: 1px solid #f75049; /* color por defecto del borde */
+  position: relative;
+}
+
+.li {
+  position: relative;
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.li:hover {
+  font-weight: 700;
+  color: #f75049;
+}
+
+.indicator {
+  position: absolute;
+  height: 2px;
+  background-color: #5ef6ff;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}

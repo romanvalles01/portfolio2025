@@ -1,0 +1,39 @@
+.leftBarWrapper {
+  width: 100px;
+  position: fixed;
+  height: 100dvh;
+  background-color: transparent;
+  overflow: hidden;
+  left: 0;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.leftBarContent {
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  animation: moveUp 1s linear infinite;
+}
+
+.line {
+  color: #00ff90;
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  opacity: 0.2;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}

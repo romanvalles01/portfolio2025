@@ -1,0 +1,240 @@
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardContainer:hover {
+  .proyectImg {
+    height: fit-content;
+    max-height: 355px;
+    transition: all 0.2s;
+    border-bottom: 4px solid #f75049;
+    border-top: 4px solid #f75049;
+  }
+  .cardBack {
+    clip-path: polygon(100% 0, 100% 90%, 93% 100%, 0 100%, 0 0);
+    width: 705px;
+    transition: all 0.2s;
+    background-color: #fe554e;
+  }
+  .cardBarLeft {
+    background-color: #fe554e;
+  }
+
+  .cardBarLeft2 {
+    background-color: #fe554e;
+  }
+
+  .cardBarLeftTop {
+    background-color: #940600;
+  }
+
+  .proyectTitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .proyectTitle {
+    text-align: start;
+    margin-left: 15px;
+    color: #f75049;
+    margin-top: 10px;
+  }
+
+  .proyectInfoContainer {
+    display: flex;
+    color: #f75049;
+  }
+  .chipContainer {
+    display: flex;
+  }
+
+  .dotCard {
+    display: none;
+  }
+
+  .card {
+    background: linear-gradient(
+      180deg,
+      rgba(71, 3, 0, 1) 57%,
+      rgba(11, 11, 17, 0.075) 100%
+    );
+    clip-path: polygon(100% 0, 100% 90%, 93% 100%, 0 100%, 0 0);
+    width: 700px;
+    background-color: #0e0e17;
+  }
+}
+.barContainer {
+  justify-content: center;
+  align-items: center;
+  width: 23px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBarLeft2 {
+  position: absolute;
+  height: 99%;
+  width: 4px;
+  z-index: 999;
+  margin-left: 40px;
+  background-color: #5ef6ff;
+}
+.cardBarLeft {
+  position: absolute;
+  height: 100%;
+  width: 23px;
+  background-color: #5ef6ff;
+  clip-path: polygon(
+    7px 425px,
+    0 418px,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 470px,
+    7px 460px
+  );
+}
+
+.cardBarLeftTop {
+  position: absolute;
+
+  height: calc(100% - 8px); /* más bajo */
+  width: 15px; /* igual ancho para alinear */
+  background-color: #2ba7ae;
+
+  clip-path: polygon(
+    7px 417px,
+    0 410px,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 470px,
+    7px 460px
+  );
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 493px;
+  background: linear-gradient(
+    180deg,
+    rgba(35, 131, 136, 1) 9%,
+    rgba(0, 23, 37, 1) 90%
+  );
+  background-size: 420px;
+  transition: all 0.2s;
+  clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+  box-shadow: inset 0px -106px 238px -159px rgba(0, 0, 0, 0.75);
+}
+
+.cardBack {
+  width: 305px;
+  height: 498px;
+  background-color: #5ef6ff;
+  clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+  transition: all 0.2s;
+}
+
+.dotCard {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: -10px 260px;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../../statics/backGroundDotCard.svg");
+}
+.proyectImg {
+  width: 100%;
+  margin-top: 0;
+  height: 200px;
+
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 4px solid #5ef6ff;
+  border-top: 4px solid #5ef6ff;
+}
+
+.proyectTitle {
+  font-weight: 600;
+  font-size: 1.9rem;
+  text-align: center;
+  margin-top: 45px;
+  color: #5ef6ff;
+  margin-left: -30px;
+}
+
+.proyectInfoContainer {
+  display: none;
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  justify-content: space-between;
+}
+.chipContainer {
+  display: none;
+}
+
+.projectDescription {
+  min-width: 500px;
+  max-width: 500px;
+  font-weight: 600;
+  font-family: "Rajdhani";
+}
+.githubWrapper {
+  position: relative;
+  width: 110px;
+  height: 37px;
+}
+
+.githubRepo {
+  text-align: start;
+  padding-left: 15px;
+  width: 110px;
+  height: 37px;
+  background-color: #000000;
+  color: #f75049;
+  border: none;
+  background-image: url("../../../statics/gitHubCat.svg");
+  background-repeat: no-repeat;
+  background-position: 70px 7px;
+  transition: all 0.2s ease;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 24px, 98px 100%, 0 100%);
+}
+
+.githubRepoBack {
+  clip-path: polygon(0 0, 100% 0, 100% 24px, 98px 100%, 0 100%);
+  position: absolute;
+  width: 110px;
+  height: 37px;
+  background-color: #f75049;
+  margin-top: 2px;
+  margin-left: 2px;
+  transition: all 0.2s ease;
+}
+
+.githubWrapper:hover {
+  cursor: pointer;
+  .githubRepo {
+    cursor: pointer;
+    color: #5ef6ff;
+    background-color: #0e0e17;
+    color: #5ef6ff;
+    box-shadow: 0 0 8px 2px rgba(255, 85, 85, 0.6),
+      0 0 12px rgba(255, 85, 85, 0.4);
+    transform: scale(1.03);
+  }
+
+  .githubRepoBack {
+    background-color: #2ba7ae;
+    box-shadow: 0 0 8px 2px rgba(255, 85, 85, 0.6),
+      0 0 12px rgba(255, 85, 85, 0.4);
+    transform: scale(1.03);
+  }
+}

@@ -1,0 +1,72 @@
+.experienciaSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  background-color: #0e0e17;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.backExperiencia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  clip-path: polygon(0 0, 11px 6px, 100% 6px, 100% 100%, 12px 100%, 0 30px);
+  background-color: #c6972f;
+}
+.experiencia {
+  color: #c6972f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 195px;
+  height: 35px;
+  clip-path: polygon(0 0, 6px 6px, 100% 6px, 100% 100%, 12px 100%, 0 25px);
+  background-color: #413b1b;
+}
+
+.titleExperience {
+  color: #56f7ff;
+  text-shadow: 0 0 1px #56f7ff, 0 0 5px #56f7ff;
+}
+.cardsContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftBarImg {
+  width: 10px;
+  background-color: #ed4e48;
+}
+
+.cardName {
+  color: #ed4e48;
+  font-weight: 100;
+  margin-bottom: 6px;
+}
+
+.imgCard {
+  width: 300px;
+  height: auto;
+  clip-path: polygon(100% 0, 100% 390px, 270px 100%, 0 100%, 0 0);
+}
+
+.imgCardGray {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}

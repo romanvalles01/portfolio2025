@@ -1,0 +1,168 @@
+.timelineSection {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  align-items: center;
+}
+
+.timelineTitle {
+  text-align: center;
+  color: #56f7ff;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  text-shadow: 0 0 15px #56f7ff;
+}
+
+.timelineWrapper {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  align-items: center;
+}
+
+.timeline {
+  position: relative;
+
+  padding-left: 40px;
+}
+
+.progressLine {
+  position: absolute;
+  top: 0;
+
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(180deg, #c5952e, #f75049);
+  transform-origin: top;
+  margin-right: 20px;
+  z-index: 1;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.timelineContent {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  display: flex;
+  max-width: 500px;
+  min-height: 130px;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: fit-content;
+  width: 100%;
+  color: #c5952e;
+  background-color: #413b1b;
+  z-index: 20;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.timelineContentBack {
+  margin-right: 10px;
+  background-color: #c5952e;
+  clip-path: polygon(
+    5% 0,
+    100% 0,
+    95% 100%,
+    0 100%,
+    6px 77%,
+    15px 73%,
+    20px 50%,
+    3% 43%
+  );
+
+  position: absolute;
+  width: 104%;
+  height: 103%;
+  z-index: 10;
+}
+
+.timelineContent h3 {
+  font-family: "Rajdhani", sans-serif;
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #c5952e;
+}
+
+.timelineContent p {
+  font-family: "Rajdhani", sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  color: #c5952e;
+}
+.timelineContentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  min-height: 130px;
+}
+.lucyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.lucy {
+  position: relative;
+  z-index: 20;
+  clip-path: polygon(
+    0 32%,
+    0 0,
+    100% 0,
+    100% 95%,
+    95% 100%,
+    0 100%,
+    0 79%,
+    5% 66%,
+    5% 39%
+  );
+}
+.lucyBack {
+  position: absolute;
+  width: 106%;
+  height: 102%;
+
+  background-color: #840702;
+  z-index: 10;
+  clip-path: polygon(
+    0 32%,
+    0 0,
+    100% 0,
+    100% 95%,
+    95% 100%,
+    0 100%,
+    0 79%,
+    5% 66%,
+    5% 39%
+  );
+}
+.lucyBack2 {
+  position: absolute;
+  width: 110%;
+  height: 104%;
+  background-color: #f75049;
+  z-index: 5;
+  clip-path: polygon(
+    0 32%,
+    0 0,
+    100% 0,
+    100% 95%,
+    95% 100%,
+    0 100%,
+    0 79%,
+    5% 66%,
+    5% 39%
+  );
+}
