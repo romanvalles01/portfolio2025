@@ -43,7 +43,7 @@ export default function ProyectCard({
           <div className={styles.proyectInfoContainer}>
             <p className={styles.projectDescription}>{description}</p>
             <div className={styles.githubWrapper}>
-              <a href={linkGithub}>
+              <a href={linkGithub} target="_blank">
                 <span className={styles.githubRepoBack}></span>
                 <button className={styles.githubRepo}>github</button>
               </a>
