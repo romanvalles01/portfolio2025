@@ -8,7 +8,7 @@ import React from "react";
 
 export default function Habilidades() {
   return (
-    <section className={styles.sectionHabilidades}>
+    <section id="habilidades" className={styles.sectionHabilidades}>
       <span className={styles.bgCircuit}>
         <Image
           className={styles.svgBgCircuit}

@@ -9,7 +9,7 @@ import TimeLine from "./TimeLine/TimeLine";
 
 export default function Experiencia() {
   return (
-    <section className={styles.experienciaSection}>
+    <section id="experiencia" className={styles.experienciaSection}>
       <div className={styles.backExperiencia}>
         <span className={styles.experiencia}>Experiencia</span>
       </div>

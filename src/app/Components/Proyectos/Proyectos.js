@@ -24,7 +24,8 @@ export default function Proyectos() {
   const [activeIndex, setActiveIndex] = useState(1);
   const CARD_WIDTH = 300;
   const GAP = 40;
-
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
   const projects = [
     {
       title: "FOMO",
@@ -68,8 +69,31 @@ export default function Proyectos() {
     setActiveIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => setInView(true), 500);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className={styles.sectionProyectos}>
+    <section
+      ref={sectionRef}
+      id="proyectos"
+      className={styles.sectionProyectos}
+    >
       <span className={styles.btnContainer}>
         <div className={styles.wrapperBtn}>
           <span className={styles.btnBackNext}></span>
@@ -102,7 +126,10 @@ export default function Proyectos() {
                 zIndex: index === activeIndex ? 10 : 1,
               }}
             >
-              <ProyectCard {...project} />
+              <ProyectCard
+                {...project}
+                isActive={index === activeIndex && inView}
+              />
             </div>
           );
         })}

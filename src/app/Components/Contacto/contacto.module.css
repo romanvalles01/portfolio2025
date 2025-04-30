@@ -8,3 +8,110 @@
   padding: 20px;
   background-color: #0e0e17;
 }
+
+.formContainer {
+  width: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.leftBarBack {
+  right: 100%;
+  position: absolute;
+  height: 100%;
+  width: 33px;
+  background-color: #840702;
+  clip-path: polygon(
+    0 25%,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 75%,
+    9px 69%,
+    9px 34%
+  );
+  z-index: 10;
+}
+.leftBar {
+  right: 100%;
+  position: absolute;
+  height: 99%;
+  width: 30px;
+  background-color: #f75049;
+  clip-path: polygon(
+    0 25%,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 75%,
+    10px 69%,
+    10px 34%
+  );
+  z-index: 20;
+}
+.form {
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid #840702;
+
+  background-color: #1cd675;
+
+  min-width: 500px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.input,
+.textarea {
+  margin-top: 0.3rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #222;
+  color: white;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border: 1px solid #0ff;
+  background-color: #1c1c1c;
+}
+
+.button {
+  padding: 0.8rem 1.5rem;
+  background-color: #0ff;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #00cccc;
+}

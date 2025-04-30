@@ -60,6 +60,13 @@
   width: 133px;
   height: 32px;
   clip-path: polygon(100% 0, 100% 21px, 122px 100%, 0 100%, 0 0);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btnPrev:hover {
+  box-shadow: 0 0 10px #ff3cac, 0 0 20px #ff3cac, 0 0 30px #ff3cac;
+  filter: brightness(1.2);
 }
 
 .btnBackPrev {

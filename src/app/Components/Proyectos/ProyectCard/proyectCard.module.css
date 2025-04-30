@@ -238,3 +238,65 @@
     transform: scale(1.03);
   }
 }
+
+.active {
+  .proyectImg {
+    height: fit-content;
+    max-height: 355px;
+    transition: all 0.2s;
+    border-bottom: 4px solid #f75049;
+    border-top: 4px solid #f75049;
+  }
+  .cardBack {
+    clip-path: polygon(100% 0, 100% 90%, 93% 100%, 0 100%, 0 0);
+    width: 705px;
+    transition: all 0.2s;
+    background-color: #fe554e;
+  }
+  .cardBarLeft {
+    background-color: #fe554e;
+  }
+
+  .cardBarLeft2 {
+    background-color: #fe554e;
+  }
+
+  .cardBarLeftTop {
+    background-color: #940600;
+  }
+
+  .proyectTitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .proyectTitle {
+    text-align: start;
+    margin-left: 15px;
+    color: #f75049;
+    margin-top: 10px;
+  }
+
+  .proyectInfoContainer {
+    display: flex;
+    color: #f75049;
+  }
+  .chipContainer {
+    display: flex;
+  }
+
+  .dotCard {
+    display: none;
+  }
+
+  .card {
+    background: linear-gradient(
+      180deg,
+      rgba(71, 3, 0, 1) 57%,
+      rgba(11, 11, 17, 0.075) 100%
+    );
+    clip-path: polygon(100% 0, 100% 90%, 93% 100%, 0 100%, 0 0);
+    width: 700px;
+    background-color: #0e0e17;
+  }
+}

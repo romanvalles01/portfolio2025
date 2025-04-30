@@ -15,6 +15,11 @@
   z-index: 999;
 }
 
+.active {
+  font-weight: 700;
+  color: #f75049;
+}
+
 .ul {
   margin-top: 40px;
   display: flex;

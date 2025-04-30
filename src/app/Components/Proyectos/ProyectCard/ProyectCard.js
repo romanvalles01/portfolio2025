@@ -9,9 +9,10 @@ export default function ProyectCard({
   description,
   image,
   technologies,
+  isActive,
 }) {
   return (
-    <div className={styles.cardContainer}>
+    <div className={`${styles.cardContainer} ${isActive ? styles.active : ""}`}>
       <span className={styles.barContainer}>
         <span className={styles.cardBarLeft}></span>
         <span className={styles.cardBarLeftTop}></span>
