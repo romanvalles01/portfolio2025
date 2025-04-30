@@ -84,13 +84,13 @@
 
 .responseContainer {
   margin-top: 18px;
-  width: 800px;
-  height: 300px;
+  width: 802px;
+  height: 302px;
   position: absolute;
   clip-path: polygon(
-    45px 12%,
-    48% 12%,
-    100% 12%,
+    45px 11%,
+    48% 11%,
+    100% 11%,
     100% 100%,
     7% 100%,
     4px 90%,
