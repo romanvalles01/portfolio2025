@@ -10,6 +10,8 @@ export default function ProyectCard({
   image,
   technologies,
   isActive,
+  link,
+  linkGithub,
 }) {
   return (
     <div className={`${styles.cardContainer} ${isActive ? styles.active : ""}`}>
@@ -21,13 +23,15 @@ export default function ProyectCard({
       <span className={styles.cardBack}>
         <article className={styles.card}>
           <span className={styles.dotCard}></span>
-          <Image
-            src={image}
-            alt="Drift Cars"
-            height={1000}
-            width={1000}
-            className={styles.proyectImg}
-          ></Image>
+          <a href={link} target="_blank">
+            <Image
+              src={image}
+              alt="Drift Cars"
+              height={1000}
+              width={1000}
+              className={styles.proyectImg}
+            ></Image>
+          </a>
           <div className={styles.proyectTitleContainer}>
             <p className={styles.proyectTitle}>{title}</p>
             <span className={styles.chipContainer}>
@@ -39,8 +43,10 @@ export default function ProyectCard({
           <div className={styles.proyectInfoContainer}>
             <p className={styles.projectDescription}>{description}</p>
             <div className={styles.githubWrapper}>
-              <span className={styles.githubRepoBack}></span>
-              <button className={styles.githubRepo}>github</button>
+              <a href={linkGithub}>
+                <span className={styles.githubRepoBack}></span>
+                <button className={styles.githubRepo}>github</button>
+              </a>
             </div>
 
             <div className={styles.technologies}></div>

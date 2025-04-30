@@ -15,6 +15,8 @@ export default function CentralChip() {
     useRef(null),
     useRef(null),
     useRef(null),
+    useRef(null),
+    useRef(null),
   ];
 
   const linesRef = useRef([]);
@@ -80,7 +82,16 @@ export default function CentralChip() {
   return (
     <div className={styles.wrapper}>
       {/* Satélites arriba */}
+
       <div className={styles.satellitesTop}>
+        <div
+          ref={satelliteRefs[9]}
+          className={`${styles.satellite} ${
+            isHovering ? styles.satelliteHover : ""
+          }`}
+        >
+          FIGMA
+        </div>
         <div
           ref={satelliteRefs[5]}
           className={`${styles.satellite} ${
@@ -162,6 +173,14 @@ export default function CentralChip() {
 
       {/* Satélites abajo */}
       <div className={styles.satellitesBottom}>
+        <div
+          ref={satelliteRefs[10]}
+          className={`${styles.satellite} ${
+            isHovering ? styles.satelliteHover : ""
+          }`}
+        >
+          NodeJs
+        </div>
         <div
           ref={satelliteRefs[7]}
           className={`${styles.satellite} ${

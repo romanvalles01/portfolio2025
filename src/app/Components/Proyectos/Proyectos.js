@@ -38,6 +38,7 @@ export default function Proyectos() {
       ],
       image: p2,
       description: "E-commerce para venta y delivery de bebidas.",
+      link: "https://fomobebidas.com",
     },
     {
       title: "DRIFT CARS",
@@ -48,6 +49,8 @@ export default function Proyectos() {
       ],
       image: p1,
       description: "Landing Page inspirada en Tesla.",
+      link: "https://tesla-ochre-nu.vercel.app/",
+      linkGithub: "https://github.com/romanvalles01/driftcars",
     },
     {
       title: "iMOVIE",
@@ -58,6 +61,8 @@ export default function Proyectos() {
       image: p3,
       description:
         "App para guardar tus películas favoritas, con autenticación y base de datos.",
+      link: "https://i-movie-eight.vercel.app/",
+      linkGithub: "https://github.com/romanvalles01/iMovie",
     },
   ];
 
