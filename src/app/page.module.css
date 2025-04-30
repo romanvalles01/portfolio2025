@@ -13,7 +13,7 @@
   position: fixed;
   pointer-events: none;
   z-index: 0;
-  background-image: url("./statics/BackGroundRed.svg");
+  background-image: url("/statics/BackGroundRed.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 60%;
