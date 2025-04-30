@@ -27,17 +27,17 @@ export default function Experiencia() {
             ></Image>
           </span>
         </div>
-        <div className={styles.CardContainer}>
-          <h1 className={styles.cardName}>NOMAD</h1>
+        <div className={`${styles.CardContainer} ${styles.highlightCard}`}>
+          <h1 className={styles.cardNameNomad}>NOMAD</h1>
           <span className={styles.imgContainer}>
-            <span className={styles.leftBarImg}></span>
+            <span className={styles.leftBarImgNomad}></span>
             <Image
               className={styles.imgCard}
               src={exp2}
               width={300}
               height={445}
               alt="Nomad"
-            ></Image>
+            />
           </span>
         </div>
         <div className={styles.CardContainer}>

@@ -45,7 +45,12 @@ export default function Contacto() {
                   <p>Contactame:</p>
                   <p>romanvalles01@gmail.com</p>
                 </span>
-                <p>linkedin</p>
+                <a
+                  href="https://www.linkedin.com/in/romanvalles/"
+                  target="_blank"
+                >
+                  <p>linkedin</p>
+                </a>
               </span>
             </div>
           </div>

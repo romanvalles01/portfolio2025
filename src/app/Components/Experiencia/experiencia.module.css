@@ -54,9 +54,20 @@
   background-color: #ed4e48;
 }
 
+.leftBarImgNomad {
+  width: 10px;
+  background-color: #5ef6ff;
+}
+
 .cardName {
   color: #ed4e48;
   font-weight: 100;
+  margin-bottom: 6px;
+}
+
+.cardNameNomad {
+  color: #5ef6ff;
+  font-weight: 500;
   margin-bottom: 6px;
 }
 
@@ -69,4 +80,8 @@
 .imgCardGray {
   filter: grayscale(100%);
   transition: filter 0.3s ease;
+}
+.highlightCard {
+  transform: scale(1.05);
+  z-index: 2;
 }
