@@ -71,6 +71,15 @@
   );
   z-index: 20;
 }
+.topContactContainer {
+  display: flex;
+  flex-direction: row;
+}
+.imageTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
 .contentContainer {
   padding: 20px;
 }
@@ -185,13 +194,19 @@
   }
 
   .topBarContainer {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
   }
 
-  .topBar,
   .topBarBack {
     width: 100%;
-    clip-path: none;
+  }
+
+  .topBar {
+    width: 95%;
   }
 
   .imgContainer,
@@ -259,5 +274,8 @@
   .footerText {
     font-size: 14px;
     margin-top: 30px;
+  }
+  .superImageContainer {
+    position: relative;
   }
 }
