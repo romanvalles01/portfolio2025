@@ -48,9 +48,8 @@
 .description {
   font-family: "Orbitron", sans-serif;
   color: #fff;
-  font-size: 30px;
+  font-size: clamp(1rem, 2.5vw, 1.875rem); /* entre 16px y 30px aprox */
 }
-
 .section {
   height: 100dvh;
   display: flex;
@@ -74,4 +73,29 @@
 .customText {
   color: #f75049;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .square {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .info {
+    align-items: center;
+  }
+
+  .name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .description {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    padding: 0 1rem;
+  }
 }

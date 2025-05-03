@@ -20,8 +20,11 @@
 }
 
 .cardWrapper {
+  display: flex;
   position: absolute;
-  height: 100%;
+
+  width: 100%;
+  justify-content: center;
   transform: translate(-50%, -50%);
   transition: transform 0.6s ease, opacity 0.6s ease;
   transform-style: preserve-3d;

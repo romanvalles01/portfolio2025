@@ -169,3 +169,53 @@
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .satellitesLeft,
+  .satellitesRight {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    position: static; /* elimina superposición */
+  }
+
+  .satellitesTop,
+  .satellitesBottom {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+  }
+
+  .centralChip {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .centralChipText1 {
+    text-align: center;
+  }
+
+  .centralChipBi1,
+  .centralChipBi2,
+  .centralChipBi3,
+  .centralChipBi4 {
+    display: none; /* o adaptar con media query */
+  }
+
+  .satellite {
+    min-width: auto;
+    width: auto;
+    height: auto;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    clip-path: none; /* opcional si no se adapta bien a tamaños chicos */
+  }
+}

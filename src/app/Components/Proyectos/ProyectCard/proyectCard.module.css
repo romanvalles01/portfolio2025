@@ -5,7 +5,6 @@
 
 .cardContainer:hover {
   .proyectImg {
-    height: fit-content;
     max-height: 355px;
     transition: all 0.2s;
     border-bottom: 4px solid #f75049;
@@ -44,9 +43,6 @@
   .proyectInfoContainer {
     display: flex;
     color: #f75049;
-  }
-  .chipContainer {
-    display: flex;
   }
 
   .dotCard {
@@ -298,5 +294,69 @@
     clip-path: polygon(100% 0, 100% 90%, 93% 100%, 0 100%, 0 0);
     width: 700px;
     background-color: #0e0e17;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .active {
+    .proyectImg {
+      max-height: 200px;
+      transition: all 0.2s;
+      border-bottom: 4px solid #f75049;
+      border-top: 4px solid #f75049;
+    }
+  }
+
+  .cardBack,
+  .card {
+    width: 95vw;
+    max-width: 350px;
+    height: auto;
+    clip-path: polygon(100% 0, 100% 95%, 90% 100%, 0 100%, 0 0);
+  }
+
+  .proyectImg {
+    height: 180px;
+  }
+
+  .proyectTitle {
+    font-size: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .proyectInfoContainer {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .projectDescription {
+    max-width: 90vw;
+    min-width: auto;
+    font-size: 1rem;
+  }
+
+  .chipContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .barContainer {
+    display: none;
+  }
+
+  .cardBarLeft,
+  .cardBarLeft2,
+  .cardBarLeftTop {
+    display: none;
+  }
+
+  .githubWrapper {
+    margin-top: 10px;
   }
 }

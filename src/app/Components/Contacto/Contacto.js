@@ -32,7 +32,7 @@ export default function Contacto() {
             </span>
             <h2 className={styles.name}>ROMAN VALLES</h2>
           </div>
-          <div>
+          <div className={styles.superResponseContainer}>
             <span className={styles.responseContainerBack}></span>
             <div className={styles.responseContainer}>
               <p className={styles.responseText}>

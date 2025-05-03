@@ -8,11 +8,11 @@
   height: 70px;
   color: #5ef6ff;
   background: rgba(255, 255, 255, 0);
-
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.1px);
   -webkit-backdrop-filter: blur(10.1px);
   z-index: 999;
+  padding: 0 20px;
 }
 
 .active {
@@ -28,7 +28,7 @@
   flex-direction: row;
   list-style: none;
   font-family: "Orbitron", sans-serif;
-  border-bottom: 1px solid #f75049; /* color por defecto del borde */
+  border-bottom: 1px solid #f75049;
   position: relative;
 }
 
@@ -53,4 +53,61 @@
   width: 0;
   transition: all 0.3s ease;
   pointer-events: none;
+}
+
+/* ------- RESPONSIVE -------- */
+.sidebar {
+  display: none;
+}
+
+/* Lista de íconos horizontal en la parte inferior */
+.iconList {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #ed4d47;
+  clip-path: polygon(10% 15%, 90% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+  background: linear-gradient(
+    180deg,
+    rgba(71, 3, 0, 1) 0%,
+    rgba(14, 14, 23, 1) 100%
+  );
+  padding-top: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 999;
+}
+
+.iconItem {
+  font-size: 22px;
+  color: #5ef6ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.iconItem:hover {
+  transform: scale(1.2);
+  color: #f75049;
+}
+
+.activeIcon {
+  color: #f75049;
+}
+
+/* Mostrar barra inferior solo en móviles */
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+  }
 }

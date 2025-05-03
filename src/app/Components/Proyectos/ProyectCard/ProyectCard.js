@@ -48,8 +48,6 @@ export default function ProyectCard({
                 <button className={styles.githubRepo}>github</button>
               </a>
             </div>
-
-            <div className={styles.technologies}></div>
           </div>
         </article>{" "}
       </span>
