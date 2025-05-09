@@ -7,6 +7,7 @@
   margin-top: 100px;
   padding: 20px;
   background-color: #0e0e17;
+  margin-bottom: 50px;
 }
 
 .messageContainer {
@@ -31,14 +32,19 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 204px);
 }
 .topBarContainer {
-  position: absolute;
+  position: relative;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .topBarBack {
   position: absolute;
   height: 35px;
   background-color: #f75049;
   width: 175px;
-  top: -33px;
+
   clip-path: polygon(
     13% 10px,
     21% 10px,
@@ -52,13 +58,10 @@
 }
 
 .topBar {
-  left: 4px;
-  margin-top: 4px;
   position: absolute;
   height: 29px;
   background-color: #840702;
   width: 167px;
-  top: -33px;
   clip-path: polygon(
     9% 10px,
     21% 10px,
@@ -197,16 +200,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    height: 12px;
     width: 100%;
+    position: absolute;
+    top: -12px;
   }
 
   .topBarBack {
     width: 100%;
+    top: 0;
+    height: 100%;
   }
 
   .topBar {
+    height: 90%;
     width: 95%;
+    top: 0;
+  }
+
+  .topBar,
+  .topBarBack {
+    clip-path: polygon(
+      10px 4px,
+      20px 4px,
+      25px 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0,
+      7px 0
+    );
+    bottom: -30px;
   }
 
   .imgContainer,
