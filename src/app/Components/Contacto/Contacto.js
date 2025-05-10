@@ -32,7 +32,7 @@ export default function Contacto() {
                 <Image src={mailSvg} height={45} width={45} alt="Mail"></Image>
                 <h1 className={styles.newMessage}>NEW MESSAGE</h1>
               </span>
-              <h2 className={styles.name}>ROMAN VALLES</h2>
+              <h2 className={styles.name}>ROMÁN VALLES</h2>
             </div>
           </div>
           <div className={styles.superResponseContainer}>
