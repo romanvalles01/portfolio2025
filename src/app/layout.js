@@ -6,6 +6,9 @@ export const metadata = {
   title: "Román Valles – Frontend Dev / UI UX",
   description: "Portfolio Román Valles, Frontend Developer y Diseñador UI/UX.",
   metadataBase: new URL("https://www.romanvalles.dev"),
+  icons: {
+    icon: "/favicon.ico", // o .png si usás PNG
+  },
 
   openGraph: {
     title: "Román Valles – Frontend Dev / UI UX",
