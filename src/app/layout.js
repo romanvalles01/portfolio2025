@@ -9,8 +9,11 @@ export const metadata = {
 
   openGraph: {
     title: "Román Valles – Frontend Dev / UI UX",
+    creator: "Román Valles",
+    authors: [{ name: "Román Valles", url: "https://www.romanvalles.dev" }],
+    publisher: "Román Valles",
     description:
-      "Portfolio Román Valles, Frontend Developer y Diseñador UI/UX.",
+      "Román Valles, desarrollador frontend con experiencia en React, Next.js y diseño UI/UX. Portfolio con estilo cyberpunk visual.",
     url: "/",
     siteName: "Román Valles Portfolio",
     images: [
