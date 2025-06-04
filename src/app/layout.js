@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <Head>
-        <title>Román Valles</title>
+        <title>Román Valles - Dev</title>
         <meta
           name="description"
           content="Portfolio Román Valles, Frontend Developer y Diseñador UI/UX."
