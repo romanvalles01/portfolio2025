@@ -43,18 +43,22 @@ export default function Contacto() {
                 laborales o colaboraciones freelance que combinen desarrollo y
                 visión creativa.
               </p>
-              <span className={styles.footerText}>
-                <span className={styles.footerContact}>
-                  <p>Contactame:</p>
-                  <p>romanvalles01@gmail.com</p>
-                </span>
+              <div className={styles.contactButtons}>
+                <a
+                  href="mailto:romanvalles01@gmail.com"
+                  className={styles.cyberButton}
+                >
+                  Enviar Email
+                </a>
                 <a
                   href="https://www.linkedin.com/in/romanvalles/"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.cyberButton}
                 >
-                  <p>linkedin</p>
+                  Ir a LinkedIn
                 </a>
-              </span>
+              </div>
             </div>
           </div>
         </div>

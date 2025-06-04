@@ -8,6 +8,21 @@ import Experiencia from "./Components/Experiencia/Experiencia";
 import Contacto from "./Components/Contacto/Contacto";
 export default function Home() {
   const squareRef = useRef(null);
+  const parallaxRef = useRef(null);
+  useEffect(() => {
+    const bg = parallaxRef.current;
+    if (!bg) return;
+
+    const handleMouseMove = (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+      bg.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      console.log("xD");
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   useEffect(() => {
     if (squareRef.current) {
@@ -23,6 +38,9 @@ export default function Home() {
   }, []);
   return (
     <>
+      <div className={styles.parallaxBackground} ref={parallaxRef} />
+      <div className={styles.parallaxGlow} />
+      <div className={styles.scanlines} />
       <span className={styles.redAura}></span>
       <span className={styles.backDot}></span>
       <div className={styles.page}>
@@ -33,8 +51,7 @@ export default function Home() {
               <span className={styles.customText}>FRONTEND</span> DEV UX UI{" "}
               <span className={styles.customText}>DESIGNER</span>
             </p>
-          </div>
-
+          </div>{" "}
           <svg
             ref={squareRef}
             className={styles.square}

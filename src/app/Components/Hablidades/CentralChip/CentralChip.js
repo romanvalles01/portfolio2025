@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./centralChip.module.css";
+import { Parallax } from "react-scroll-parallax";
 
 export default function CentralChip() {
   const [isHovering, setIsHovering] = useState(false);
@@ -82,121 +83,146 @@ export default function CentralChip() {
   return (
     <div className={styles.wrapper}>
       {/* Satélites arriba */}
-
       <div className={styles.satellitesTop}>
-        <div
-          ref={satelliteRefs[9]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          FIGMA
-        </div>
-        <div
-          ref={satelliteRefs[5]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          HTML
-        </div>
-        <div
-          ref={satelliteRefs[6]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          CSS
-        </div>
+        <Parallax translateY={[-20, 10]}>
+          <div
+            ref={satelliteRefs[9]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            FIGMA
+          </div>
+        </Parallax>
+        <Parallax translateY={[-15, 15]}>
+          <div
+            ref={satelliteRefs[5]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            HTML
+          </div>
+        </Parallax>
+        <Parallax translateY={[-10, 20]}>
+          <div
+            ref={satelliteRefs[6]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            CSS
+          </div>
+        </Parallax>
       </div>
 
       {/* Satélites laterales */}
       <div className={styles.satellitesLeft}>
-        <div
-          ref={satelliteRefs[0]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          React
-        </div>
-        <div
-          ref={satelliteRefs[1]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          Next.js
-        </div>
+        <Parallax translateX={[-10, 10]}>
+          <div
+            ref={satelliteRefs[0]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            React
+          </div>
+        </Parallax>
+        <Parallax translateX={[-5, 15]}>
+          <div
+            ref={satelliteRefs[1]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            Next.js
+          </div>
+        </Parallax>
       </div>
 
       {/* Chip central */}
-      <span
-        className={styles.centralChip}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        ref={chipRef}
-      >
-        <div className={styles.centralChipText}>
-          <p className={styles.centralChipText1}>CHARACTER LEVEL</p>
-          <h1>24</h1>
-        </div>
-      </span>
+      <Parallax translateY={[-10, 10]} scale={[0.98, 1.02]}>
+        <span
+          className={styles.centralChip}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          ref={chipRef}
+        >
+          <div className={styles.centralChipText}>
+            <p className={styles.centralChipText1}>CHARACTER LEVEL</p>
+            <h1>24</h1>
+          </div>
+        </span>
+      </Parallax>
 
       {/* Satélites laterales derechos */}
       <div className={styles.satellitesRight}>
-        <div
-          ref={satelliteRefs[2]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          Firebase
-        </div>
-        <div
-          ref={satelliteRefs[3]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          Tailwind
-        </div>
-        <div
-          ref={satelliteRefs[4]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          Astro
-        </div>
+        <Parallax translateX={[15, -10]}>
+          <div
+            ref={satelliteRefs[2]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            Firebase
+          </div>
+        </Parallax>
+
+        <Parallax translateX={[10, -15]}>
+          <div
+            ref={satelliteRefs[3]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            Tailwind
+          </div>
+        </Parallax>
+
+        <Parallax translateX={[5, -20]}>
+          <div
+            ref={satelliteRefs[4]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            Astro
+          </div>
+        </Parallax>
       </div>
 
       {/* Satélites abajo */}
       <div className={styles.satellitesBottom}>
-        <div
-          ref={satelliteRefs[10]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          NodeJs
-        </div>
-        <div
-          ref={satelliteRefs[7]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          Git
-        </div>
-        <div
-          ref={satelliteRefs[8]}
-          className={`${styles.satellite} ${
-            isHovering ? styles.satelliteHover : ""
-          }`}
-        >
-          Vercel
-        </div>
+        <Parallax translateY={[10, -10]}>
+          <div
+            ref={satelliteRefs[10]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            NodeJs
+          </div>
+        </Parallax>
+        <Parallax translateY={[15, -15]}>
+          <div
+            ref={satelliteRefs[7]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            Git
+          </div>
+        </Parallax>
+        <Parallax translateY={[20, -20]}>
+          <div
+            ref={satelliteRefs[8]}
+            className={`${styles.satellite} ${
+              isHovering ? styles.satelliteHover : ""
+            }`}
+          >
+            Vercel
+          </div>
+        </Parallax>
       </div>
     </div>
   );

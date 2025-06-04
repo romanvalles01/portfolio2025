@@ -1,4 +1,5 @@
 .centralChip {
+  display: flex;
   width: 200px;
   height: 200px;
   background-color: #5ef6ff;
