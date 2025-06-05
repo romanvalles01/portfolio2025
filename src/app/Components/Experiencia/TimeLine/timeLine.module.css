@@ -5,14 +5,7 @@
   justify-content: space-between;
   max-width: 900px;
   align-items: center;
-}
-
-.timelineTitle {
-  text-align: center;
-  color: #56f7ff;
-  font-size: 2.8rem;
-  margin-bottom: 60px;
-  text-shadow: 0 0 15px #56f7ff;
+  transition: all 0.2s;
 }
 
 .timelineWrapper {
@@ -22,11 +15,19 @@
   justify-content: space-between;
   max-width: 900px;
   align-items: center;
+  transition: all 0.2s;
 }
 
 .timelineItem {
   position: relative;
   margin-bottom: 60px;
+  transition: all 0.2s;
+}
+.timelineTitle {
+  padding-top: 0px;
+  transition: padding-top 0.2s ease, color 0.2s ease;
+  color: #f75049;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .timelineContent {
@@ -39,13 +40,12 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: fit-content;
   width: 100%;
-  color: #c5952e;
-  background-color: #413b1b;
+  color: #f75049;
+  background-color: #1c1a2e;
   z-index: 20;
   backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   clip-path: polygon(
     5% 0,
     100% 0,
@@ -56,11 +56,13 @@
     20px 50%,
     3% 43%
   );
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .timelineContentBack {
-  margin-right: 5px;
-  background-color: #c5952e;
+  background-color: #00eaff;
   clip-path: polygon(
     5% 0,
     100% 0,
@@ -71,25 +73,50 @@
     20px 50%,
     3% 43%
   );
-
   position: absolute;
-  width: 104%;
-  height: 103%;
-  z-index: 10;
+  top: 0;
+  left: -9px;
+  width: 103%;
+  height: 105%;
+  z-index: 1;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.timelineDetails {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+.timelineContent:hover {
+  .timelineTitle {
+    padding-top: 30px;
+    color: rgba(247, 80, 73, 1);
+  }
+}
+
+.timelineContent:hover .timelineDetails {
+  max-height: 1000px;
+  opacity: 1;
+  margin-top: 10px;
+  padding: 10px;
+  transition: all 0.2s;
 }
 
 .timelineContent h3 {
   font-family: "Rajdhani", sans-serif;
   margin: 0 0 10px;
   font-size: 1.5rem;
-  color: #c5952e;
+  color: #f75049;
 }
 
 .timelineContent p {
   font-family: "Rajdhani", sans-serif;
   margin: 0;
   font-size: 1rem;
-  color: #c5952e;
+  color: #f75049;
 }
 .timelineContentContainer {
   display: flex;
@@ -97,6 +124,7 @@
   align-items: center;
   min-width: 400px;
   min-height: 130px;
+  transition: all 0.2s;
 }
 .lucyContainer {
   display: flex;

@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import Habilidades from "./Components/Hablidades/Habilidades";
 import Experiencia from "./Components/Experiencia/Experiencia";
 import Contacto from "./Components/Contacto/Contacto";
+import Footer from "./Components/Footer/Footer";
 export default function Home() {
   const squareRef = useRef(null);
   const parallaxRef = useRef(null);
@@ -685,6 +686,7 @@ export default function Home() {
         <Habilidades></Habilidades>
         <Experiencia></Experiencia>
         <Contacto></Contacto>
+        <Footer></Footer>
       </div>
     </>
   );

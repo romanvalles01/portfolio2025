@@ -20,8 +20,8 @@ export default function Contacto() {
                 <Image
                   className={styles.pfp}
                   src={pfp}
-                  width={167}
-                  height={224}
+                  width={1024}
+                  height={1536}
                   alt="Roman Valles"
                 ></Image>
               </div>

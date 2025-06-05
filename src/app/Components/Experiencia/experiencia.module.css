@@ -2,86 +2,72 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-
   background-color: #0e0e17;
   justify-content: center;
   align-items: center;
-  gap: 40px;
 }
 .backExperiencia {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 40px;
-  clip-path: polygon(0 0, 11px 6px, 100% 6px, 100% 100%, 12px 100%, 0 30px);
-  background-color: #c6972f;
+  position: relative;
+  display: inline-block;
+
+  padding: 0.5rem 1.2rem;
+  background-color: #0e0e17;
+  border: 2px solid #ffce01;
+  clip-path: polygon(
+    12px 0%,
+    100% 0%,
+    100% 100%,
+    calc(100% - 12px) 100%,
+    calc(100% - 12px) 85%,
+    12px 85%,
+    12px 100%,
+    0% 100%,
+    0% 0%
+  );
+  box-shadow: 0 0 12px #ffce01aa, inset 0 0 12px #0e0e17;
+  animation: fadeInTag 1s ease-in-out;
 }
+
 .experiencia {
-  color: #c6972f;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  color: #ffce01;
+  text-shadow: 0 0 4px #ffce01;
+  letter-spacing: 1px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 195px;
-  height: 35px;
-  clip-path: polygon(0 0, 6px 6px, 100% 6px, 100% 100%, 12px 100%, 0 25px);
-  background-color: #413b1b;
+  gap: 10px;
 }
 
-.titleExperience {
-  color: #56f7ff;
-  text-shadow: 0 0 1px #56f7ff, 0 0 5px #56f7ff;
-}
-.cardsContainer {
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 20px;
-}
-.cardContainer {
-  display: flex;
-  flex-direction: column;
+.backExperiencia::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 10%;
+  width: 3px;
+  height: 80%;
+  background-color: #ffce01;
+  box-shadow: 0 0 10px #ffce01, 0 0 20px #ffce01;
 }
 
-.imgContainer {
-  display: flex;
-  flex-direction: row;
-}
-
-.leftBarImg {
-  width: 10px;
-  background-color: #ed4e48;
-}
-
-.leftBarImgNomad {
-  width: 10px;
-  background-color: #5ef6ff;
-}
-
-.cardName {
-  color: #ed4e48;
-  font-weight: 100;
-  margin-bottom: 6px;
-}
-
-.cardNameNomad {
-  color: #5ef6ff;
-  font-weight: 500;
-  margin-bottom: 6px;
+/* Animación flotante + glitch sutil */
+@keyframes floatGlitch {
+  0% {
+    transform: translateY(0px) scale(1);
+    box-shadow: 0 0 12px #ffce01aa;
+  }
+  50% {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 0 16px #ffce01cc;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    box-shadow: 0 0 12px #ffce01aa;
+  }
 }
 
 .imgCard {
   width: 300px;
   height: auto;
   clip-path: polygon(100% 0, 100% 390px, 270px 100%, 0 100%, 0 0);
-}
-
-.imgCardGray {
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-.highlightCard {
-  transform: scale(1.05);
-  z-index: 2;
 }

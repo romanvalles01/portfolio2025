@@ -5,7 +5,7 @@
   height: 600px;
   align-items: center;
   margin-top: 100px;
-  margin-left: 150px;
+
   background-color: #0e0e17;
   margin-bottom: 100px;
 }
@@ -15,10 +15,12 @@
   height: auto;
   display: flex;
   flex-direction: row;
+  padding-left: 5%;
 }
 
 .pfp {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 197px);
+  width: 98%;
+  clip-path: polygon(100% 0, 100% 94%, 12% 94%, 1px 85%, 0 0);
 }
 
 .imgContainer {
@@ -44,7 +46,6 @@
   height: 35px;
   background-color: #f75049;
   width: 175px;
-
   clip-path: polygon(
     13% 10px,
     21% 10px,
@@ -100,14 +101,14 @@
   height: 302px;
   position: absolute;
   clip-path: polygon(
-    45px 11%,
-    48% 11%,
-    100% 11%,
+    47px 10%,
+    44% 10%,
+    100% 10%,
     100% 100%,
     7% 100%,
-    4px 90%,
-    5px 10px,
-    -4px 4px
+    0 90%,
+    0 10%,
+    0 0
   );
   background-color: #0e0e17;
   padding-top: 50px;
@@ -118,14 +119,14 @@
 }
 
 .responseContainerBack {
-  margin-top: 18px;
+  margin-left: -1px;
+  margin-top: 16px;
   width: 804px;
-  height: 304px;
+  height: 306px;
   position: absolute;
-
   clip-path: polygon(
-    6% 10%,
-    48% 10%,
+    47px 10%,
+    44% 10%,
     100% 10%,
     100% 100%,
     7% 100%,
@@ -167,146 +168,6 @@
   margin-top: 100px;
   margin-left: 10px;
 }
-@media (max-width: 1080px) {
-  .messageContainer {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .imgContainer {
-    margin-bottom: 20px;
-  }
-
-  .responseContainer,
-  .responseContainerBack {
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    clip-path: none;
-    padding: 20px;
-  }
-
-  .responseContainer {
-    z-index: 2;
-  }
-
-  .responseContainerBack {
-    z-index: 1;
-  }
-
-  .responseText {
-    font-size: 20px;
-  }
-
-  .topBarContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 12px;
-    width: 100%;
-    position: absolute;
-    top: -12px;
-  }
-
-  .topBarBack {
-    width: 100%;
-    top: 0;
-    height: 100%;
-  }
-
-  .topBar {
-    height: 90%;
-    width: 95%;
-    top: 0;
-  }
-
-  .topBar,
-  .topBarBack {
-    clip-path: polygon(
-      10px 4px,
-      20px 4px,
-      25px 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      0 0,
-      7px 0
-    );
-    bottom: -30px;
-  }
-
-  .imgContainer,
-  .pfp {
-    width: 100%;
-    height: auto;
-    clip-path: none;
-  }
-
-  .newMessageContainer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footerText {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  .superResponseContainer {
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    position: relative;
-    clip-path: none;
-  }
-  .responseContainerBack {
-    clip-path: polygon(100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
-
-    height: 95%;
-    width: 100%;
-    position: absolute;
-    background-color: #ffce01;
-  }
-  .responseContainer {
-    clip-path: polygon(100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
-
-    background-color: #0e0e17;
-    width: 99%;
-  }
-  .contactoSection {
-    height: auto;
-    margin-top: 60px;
-    padding: 16px;
-  }
-
-  .responseText {
-    font-size: 18px;
-  }
-
-  .newMessage {
-    font-size: 18px;
-  }
-
-  .name {
-    font-size: 18px;
-  }
-
-  .footerText {
-    font-size: 14px;
-    margin-top: 30px;
-  }
-  .superImageContainer {
-    position: relative;
-  }
-}
 
 @keyframes fadeInUp {
   from {
@@ -344,5 +205,71 @@
 .cyberButton:hover {
   background-color: #ffc700;
   color: #0e0e17;
-  box-shadow: 0 0 20px #ffc700, 0 0 40px #ffc700;
+  box-shadow: 0 0 5px #ffc700, 0 0 10px #ffc700;
+}
+
+@media (max-width: 600px) {
+  .messageContainer {
+    width: 95%;
+    padding: 0px;
+  }
+
+  .responseContainer {
+    margin-top: 19px;
+    margin-left: -8px;
+    width: 95%;
+  }
+  .responseContainerBack {
+    margin-left: -10px;
+    width: 96%;
+  }
+
+  .contactButtons {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+  }
+  .cyberButton {
+    width: 130px;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .newMessage {
+    font-size: 1.1rem;
+  }
+
+  .responseText {
+    font-size: 14px;
+  }
+
+  .cyberButton {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  .imgContainer {
+    width: 130px;
+    height: 180px;
+    clip-path: polygon(100% 0, 100% 94%, 12% 94%, 1px 85%, 0 0);
+  }
+
+  .pfp {
+    width: 98%;
+    clip-path: polygon(100% 0, 100% 90%, 12% 90%, 1px 81%, 0 0);
+  }
+
+  .topBarContainer {
+    height: 32px;
+    width: 130px;
+  }
+  .topBar {
+    width: 98%;
+    height: 28px;
+  }
+  .topBarBack {
+    width: 130px;
+    height: 32px;
+  }
 }

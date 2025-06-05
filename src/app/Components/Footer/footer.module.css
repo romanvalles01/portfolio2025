@@ -1,0 +1,49 @@
+.footer {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e0e17;
+  color: #5ef6ff;
+  font-family: "VT323", monospace;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footerLinks a {
+  color: #f75049;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #5ef6ff;
+  text-shadow: 0 0 10px #5ef6ff;
+}
+
+.terminalText {
+  color: #00ff88;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.owner {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #f75049;
+  text-shadow: 0 0 5px #f75049aa;
+}
+
+.role {
+  color: #5ef6ff;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}

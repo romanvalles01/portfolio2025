@@ -11,7 +11,7 @@ export default function Experiencia() {
   return (
     <section id="experiencia" className={styles.experienciaSection}>
       <div className={styles.backExperiencia}>
-        <span className={styles.experiencia}>Experiencia</span>
+        <span className={styles.experiencia}>EXPERIENCIA</span>
       </div>
 
       <TimeLine></TimeLine>
