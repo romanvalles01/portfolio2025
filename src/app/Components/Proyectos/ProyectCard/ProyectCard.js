@@ -26,7 +26,7 @@ export default function ProyectCard({
           <a href={link} target="_blank">
             <Image
               src={image}
-              alt="Drift Cars"
+              alt={title}
               height={1000}
               width={1000}
               className={styles.proyectImg}

@@ -93,6 +93,32 @@ export default function Proyectos() {
     return () => observer.disconnect();
   }, []);
 
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+
+    if (distance > 50) {
+      nextSlide(); // swipe izquierda
+    } else if (distance < -50) {
+      prevSlide(); // swipe derecha
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -114,7 +140,12 @@ export default function Proyectos() {
         </div>
       </span>
 
-      <div className={styles.carousel}>
+      <div
+        className={styles.carousel}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {projects.map((project, index) => {
           const offset = index - activeIndex;
           const translate = offset * (CARD_WIDTH + GAP);

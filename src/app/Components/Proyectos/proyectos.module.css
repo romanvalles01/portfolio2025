@@ -86,3 +86,37 @@
   height: 36px;
   clip-path: polygon(100% 0, 100% 24px, 125px 100%, 0 100%, 0 0);
 }
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    height: 500px;
+  }
+
+  .btnBackNext,
+  .btnBackPrev {
+    width: 45px;
+    height: 30px;
+  }
+
+  .btnNext,
+  .btnPrev {
+    width: 42px;
+    height: 28px;
+  }
+
+  .btnNext {
+    clip-path: polygon(100% 0, 100% 100%, 4px 100%, 0 14px, 0 0);
+  }
+
+  .btnBackNext {
+    clip-path: polygon(100% 0, 100% 100%, 5px 100%, 0 14px, 0 0);
+  }
+
+  .btnPrev {
+    clip-path: polygon(100% 0, 100% 14px, 34px 100%, 0 100%, 0 0);
+  }
+
+  .btnBackPrev {
+    clip-path: polygon(100% 0, 100% 14px, 35px 100%, 0 100%, 0 0);
+  }
+}
