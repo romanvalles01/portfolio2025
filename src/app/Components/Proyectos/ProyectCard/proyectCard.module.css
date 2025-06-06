@@ -300,66 +300,37 @@
 }
 
 @media (max-width: 768px) {
-  .active {
-    .proyectTitleContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  .chipContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .card {
-    height: 500px;
+  .proyectTitleContainer {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
   }
-  .cardContainer {
-    height: 500px;
-  }
-  .cardBack {
-    height: 500px;
-  }
+
   .cardContainer {
     flex-direction: column;
     align-items: center;
   }
-  .active {
-    .proyectImg {
-      max-height: 200px;
-      transition: all 0.2s;
-      border-bottom: 4px solid #f75049;
-      border-top: 4px solid #f75049;
-    }
-  }
 
-  .cardBack,
+  .cardBack {
+    display: flex;
+    justify-content: center;
+    width: 90dvw;
+    max-width: 305px;
+  }
   .card {
-    width: 90%;
-    max-width: 350px;
-
-    clip-path: polygon(100% 0, 100% 95%, 90% 100%, 0 100%, 0 0);
-  }
-  .active {
-    .githubWrapper {
-      bottom: 20px;
-      left: 20%;
-    }
-
-    .cardBack {
-      width: 99%;
-    }
-    .card {
-      width: 98%;
-      margin-left: 3px;
-      height: 99%;
-    }
-  }
-
-  .proyectImg {
-    height: 180px;
+    width: 90dvw;
+    max-width: 300px;
   }
 
   .proyectTitle {
     font-size: 1.5rem;
-    margin-left: 0;
+    margin-left: 0 !important;
     text-align: center;
   }
 
@@ -384,13 +355,9 @@
     display: none;
   }
 
-  .cardBarLeft,
-  .cardBarLeft2,
-  .cardBarLeftTop {
-    display: none;
-  }
-
   .githubWrapper {
     margin-top: 10px;
+    bottom: 20px;
+    left: 15%;
   }
 }

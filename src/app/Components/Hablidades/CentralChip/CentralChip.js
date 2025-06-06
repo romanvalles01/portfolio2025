@@ -26,7 +26,9 @@ export default function CentralChip() {
   useEffect(() => {
     if (typeof window === "undefined" || !chipRef.current) return;
 
-    // Importa dinámicamente solo en el cliente
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) return; // ⛔ No renderiza líneas en mobile
+
     import("leader-line-new").then((module) => {
       const LeaderLine = module.default;
 
@@ -44,10 +46,9 @@ export default function CentralChip() {
     });
 
     return () => {
-      linesRef.current.forEach((line) => line && line.remove());
+      linesRef.current.forEach((line) => line?.remove());
     };
   }, []);
-
   useEffect(() => {
     linesRef.current.forEach((line) => {
       if (!line) return;

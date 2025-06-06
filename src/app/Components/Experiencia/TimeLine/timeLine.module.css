@@ -126,6 +126,7 @@
   min-height: 130px;
   transition: all 0.2s;
 }
+
 .lucyContainer {
   display: flex;
   justify-content: center;
@@ -152,7 +153,6 @@
   position: absolute;
   width: 106%;
   height: 102%;
-
   background-color: #840702;
   z-index: 10;
   clip-path: polygon(
@@ -246,11 +246,5 @@
 
   .lucyContainer {
     flex-direction: column;
-  }
-
-  .lucy,
-  .lucyBack,
-  .lucyBack2 {
-    width: 100%;
   }
 }

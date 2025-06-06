@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./proyectCard.module.css";
 import Image from "next/image";
 import ChipImg from "../../ChipImg/ChipImg";
+import { useState, useEffect } from "react";
 
 export default function ProyectCard({
   title,
@@ -13,6 +14,17 @@ export default function ProyectCard({
   link,
   linkGithub,
 }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile(); // inicial
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <div className={`${styles.cardContainer} ${isActive ? styles.active : ""}`}>
       <span className={styles.barContainer}>

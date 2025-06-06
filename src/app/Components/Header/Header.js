@@ -90,23 +90,28 @@ export default function Header() {
 
       {/* Mobile Sidebar */}
       <aside className={styles.sidebar}>
-        <ul className={styles.iconList}>
-          {sectionData.map(({ id, icon }) => (
-            <li
-              key={id}
-              className={`${styles.iconItem} ${
-                activeSection === id ? styles.activeIcon : ""
-              }`}
-              onClick={() => {
-                const el = document.getElementById(id);
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }}
-              title={id}
-            >
-              {icon}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.vaporlayer}></div>
+        <div>
+          {" "}
+          <span className={styles.iconListBack}></span>
+          <ul className={styles.iconList}>
+            {sectionData.map(({ id, icon }) => (
+              <li
+                key={id}
+                className={`${styles.iconItem} ${
+                  activeSection === id ? styles.activeIcon : ""
+                }`}
+                onClick={() => {
+                  const el = document.getElementById(id);
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
+                title={id}
+              >
+                {icon}
+              </li>
+            ))}
+          </ul>
+        </div>
       </aside>
     </>
   );

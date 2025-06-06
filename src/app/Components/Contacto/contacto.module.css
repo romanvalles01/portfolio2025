@@ -209,6 +209,9 @@
 }
 
 @media (max-width: 600px) {
+  .contactoSection {
+    margin-bottom: 0px;
+  }
   .messageContainer {
     width: 95%;
     padding: 0px;
@@ -234,6 +237,7 @@
   }
   .name {
     font-size: 1.5rem;
+    margin-top: 30px;
   }
 
   .newMessage {

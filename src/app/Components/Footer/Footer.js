@@ -22,7 +22,7 @@ export default function Footer() {
           <a href="mailto:romanvalles01@gmail.com">Email</a>
         </li>
         <li>
-          <a href="/CV-RomanValles.pdf" download>
+          <a href="/CV - Román Valles.pdf" download>
             Descargar CV
           </a>
         </li>
