@@ -46,7 +46,7 @@ export default function Contacto() {
               <div className={styles.contactButtons}>
                 <a
                   href="mailto:romanvalles01@gmail.com"
-                  className={styles.cyberButton}
+                  className={styles.cyberButtonMail}
                 >
                   Enviar Email
                 </a>

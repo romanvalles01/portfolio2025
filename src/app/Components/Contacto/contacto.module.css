@@ -186,6 +186,8 @@
 
 .contactButtons {
   margin-top: 70px;
+  display: flex;
+  justify-content: end;
 }
 .cyberButton {
   font-family: "Orbitron", sans-serif;
@@ -201,8 +203,27 @@
   text-decoration: none;
   display: inline-block;
 }
+.cyberButtonMail {
+  font-family: "Orbitron", sans-serif;
+  background: transparent;
+  border: 2px solid #ffc700;
+  color: #ffc700;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #ffc700aa;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 
 .cyberButton:hover {
+  background-color: #ffc700;
+  color: #0e0e17;
+  box-shadow: 0 0 5px #ffc700, 0 0 10px #ffc700;
+}
+.cyberButtonMail:hover {
   background-color: #ffc700;
   color: #0e0e17;
   box-shadow: 0 0 5px #ffc700, 0 0 10px #ffc700;
