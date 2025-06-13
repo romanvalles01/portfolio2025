@@ -5,6 +5,8 @@ import ProyectCard from "./ProyectCard/ProyectCard";
 import p1 from "../../statics/p1.png";
 import p2 from "../../statics/p2.svg";
 import p3 from "../../statics/p3.svg";
+import p4 from "../../statics/p4.png";
+import p5 from "../../statics/p5.png";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 // Import images
@@ -19,6 +21,8 @@ import css from "../../statics/Icons/css.svg";
 import html from "../../statics/Icons/html.svg";
 import prevIcon from "../../statics/prev.svg";
 import nextIcon from "../../statics/next.svg";
+import socketio from "../../statics/Icons/socketio.png";
+import express from "../../statics/Icons/express.png";
 
 export default function Proyectos() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -63,6 +67,30 @@ export default function Proyectos() {
         "App para guardar tus películas favoritas, con autenticación y base de datos.",
       link: "https://i-movie-eight.vercel.app/",
       linkGithub: "https://github.com/romanvalles01/iMovie",
+    },
+    {
+      title: "VulnScanner",
+      technologies: [
+        { name: "Node.js", logo: nodejs },
+        { name: "Express", logo: express },
+        { name: "Tailwind", logo: tailwind },
+      ],
+      image: p5,
+      description:
+        "Scanner básico para analizar puertos y headers HTTP inseguros.",
+      linkGithub: "https://github.com/romanvalles01/vuln-scanner",
+    },
+    {
+      title: "Traffic Dashboard",
+      technologies: [
+        { name: "Node.js", logo: nodejs },
+        { name: "Socket.IO", logo: socketio },
+        { name: "Tailwind", logo: tailwind },
+      ],
+      image: p4,
+      description:
+        "Dashboard en tiempo real para visualizar tráfico de red usando tcpdump.",
+      linkGithub: "https://github.com/romanvalles01/traffic-dashboard",
     },
   ];
 
